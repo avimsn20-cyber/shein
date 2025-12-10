@@ -9,6 +9,18 @@ import os
 import threading
 import re
 import asyncio
+from flask import Flask
+import threading
+import time
+
+app = Flask('')
+
+@app.route('/')
+def home():
+    return "I'm alive"
+
+def run():
+    app.run(host='0.0.0.0', port=8080)
 
 # Configuration
 CONFIG = {
@@ -1004,5 +1016,10 @@ def main():
         print("\n🛑 Stopping monitor...")
         monitor.stop_monitoring()
 
+def keep_alive():
+    t = threading.Thread(target=run)
+    t.start()
+
 if __name__ == "__main__":
     main()
+
