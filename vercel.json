@@ -1,14 +1,15 @@
 {
   "builds": [
     {
-      "src": "app.py",
+      "src": "bot_controller.py",
       "use": "@vercel/python"
     }
   ],
   "routes": [
     {
       "src": "/(.*)",
-      "dest": "app.py"
+      "dest": "bot_controller.py"
     }
   ]
+
 }
