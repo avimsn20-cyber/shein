@@ -1,2 +1,5 @@
+Flask
 requests
 beautifulsoup4
+sqlite3 # Optional, if you're using this in a production environment
+# Vercel will auto-install the @vercel/python builder dependencies
