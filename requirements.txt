@@ -1,5 +1,4 @@
 Flask
 requests
 beautifulsoup4
-sqlite3 # Optional, if you're using this in a production environment
-# Vercel will auto-install the @vercel/python builder dependencies
+# sqlite3 was removed as it is part of the Python standard library
